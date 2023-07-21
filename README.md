@@ -1,6 +1,8 @@
 ## Consumo de API __Attempt__
 
-Desenvolvido em ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) que permite pesquisar cidades brasileiras e obter informações detalhadas sobre o clima e a temperatura. O aplicativo utiliza quatro APIs para fornecer funcionalidades específicas:
+SOMENTE WEB
+
+Desenvolvido em ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) que permite pesquisar cidades brasileiras e obter informações detalhadas sobre o clima e a temperatura. O site web utiliza quatro APIs para fornecer funcionalidades específicas:
 
 - __[API para Localização das Cidades do Brasil (IBGE):](https://servicodados.ibge.gov.br/api/docs/localidades)__ Esta API do IBGE é usada para obter informações detalhadas sobre as cidades brasileiras, como nomes, estados e regiões.
 
@@ -32,7 +34,7 @@ Neste repositório, você encontrará os arquivos necessários para executar o s
 - __Imagens da Cidade:__ Ao pesquisar uma cidade, o aplicativo também exibirá imagens relacionadas à cidade para tornar a experiência mais visual e agradável.
 
 - __Calculadora do Amor:__ Além das informações climáticas, o aplicativo também oferece um toque de diversão com a calculadora do amor. Basta inserir o nome de duas pessoas e descobrir a porcentagem de compatibilidade amorosa!
-
-Sinta-se à vontade para explorar o código e fornecer feedbacks construtivos.
+  
+Feito em conjunto com [Eduardo Scarante](https://github.com/EduardoScarante)
 
 Obrigado por visitar este repositório.
