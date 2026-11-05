@@ -15,9 +15,6 @@
             <a href="https://github.com/EduardoScarante" target="_blank">
               <img src="../imagens/Git.png " />
             </a>
-            <a href="https://eduardoscarante.github.io/vuePesonalSite/" target="_blank">
-              <img src="../imagens/website.png" />
-            </a>
           </div>
         </section>
       </div>
@@ -32,9 +29,6 @@
           <div>
             <a href="https://github.com/SandySei" target="_blank">
               <img src="../imagens/Git.png " /></a>
-            <a href="https://sandysei.github.io/site-vue/" target="_blank">
-              <img src="../imagens/website.png" />
-            </a>
           </div>
         </section>
       </div>
@@ -85,14 +79,23 @@
 
 <style scoped>
 .container {
-  overflow: auto;
-  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 section {
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   padding-top: 50px;
   justify-content: center;
+}
+
+section.hover {
+  gap: 0;
+  padding-top: 0;
 }
 
 .title {
@@ -102,28 +105,23 @@ section {
   font-weight: 500;
 }
 
-.Eduardo {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: end;
-
-  width: 20vw;
-}
-
+.Eduardo,
 .Sandy {
   display: flex;
-  flex-direction: row;
-  align-items: end;
+  justify-content: center;
 
-  width: 20vw;
+  width: 300px;
+  max-width: 100%;
 }
 
 .photo img {
   height: auto;
 
   width: 250px;
-  border-radius: 250px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
 
   border: 2px solid rgb(0, 0, 0, 0.5);
   padding: 5px;
@@ -157,8 +155,9 @@ a>img:hover {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: clamp(22px, 5vw, 30px);
   font-weight: 400;
+  text-align: center;
 }
 
 
@@ -167,8 +166,11 @@ h3 {
 
 .apis {
   flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
   margin: auto;
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
 }
 
 .text {
@@ -182,6 +184,8 @@ h3 {
 
 .text>img {
   width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .desc {
@@ -190,5 +194,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 </style>
