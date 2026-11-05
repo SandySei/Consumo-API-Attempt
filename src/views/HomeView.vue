@@ -27,7 +27,7 @@ export default {
           }
         })
         .catch((err) => {
-          console.log("error: ", err);
+          console.error("error: ", err);
         });
     },
     handleFilter() {
@@ -54,18 +54,20 @@ export default {
 
 <template>
   <div class="container">
-    <div id="imagens">
-      <img id="logo" src="../logos/AttemptICONazul.png" />
-      <img id="text" src="../logos/AttemptTEXTO(2).png" />
-    </div>
+    <div class="wrapper">
+      <div id="imagens">
+        <img id="logo" src="../logos/AttemptICONazul.png" />
+        <img id="text" src="../logos/AttemptTEXTO(2).png" />
+      </div>
 
-    <input type="text" v-model="filtro" @keyup="handleFilter" placeholder="Busque por uma cidade do Brasil..." />
+      <input type="text" v-model="filtro" @keyup="handleFilter" placeholder="Busque por uma cidade do Brasil..." />
 
-    <br />
+      <br />
 
-    <div class="boxFilter" v-show="mostarbox">
-      <div v-for="x of filteredCidades">
-        <search @click="handleClickDetail" :filteredCidades="x" />
+      <div class="boxFilter" v-show="mostarbox">
+        <div v-for="x of filteredCidades" :key="x.nome + x.UF">
+          <search @click="handleClickDetail" :filteredCidades="x" />
+        </div>
       </div>
     </div>
   </div>
@@ -73,21 +75,30 @@ export default {
 
 <style scoped>
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-
   background: linear-gradient(360deg,
       #002d72 0%,
       #0055d9 100%);
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 
-  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 40px 20px;
 }
 
 #imagens {
@@ -96,24 +107,29 @@ export default {
   align-items: center;
   text-align: center;
   justify-content: center;
+  gap: 10px;
 
   width: 100%;
-  height: 25%;
+  height: clamp(80px, 22vh, 200px);
 
-  padding-bottom: 100px;
-
+  margin-bottom: 60px;
 }
 
 img#logo,
 img#text {
   width: auto;
   height: 100%;
+  min-width: 0;
+  object-fit: contain;
+}
+
+img#text {
+  max-width: 70%;
 }
 
 input {
-  height: 20px;
-  width: 37%;
-  min-width: 400px;
+  width: 100%;
+  max-width: 600px;
   border: none;
   padding: 20px;
   background-color: rgb(238, 238, 238);
@@ -127,9 +143,20 @@ input:focus {
 }
 
 .boxFilter {
-  height: 25vh;
-  overflow: auto;
+  width: 100%;
+  max-width: 600px;
+  max-height: 40vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #imagens {
+    height: 70px;
+    margin-bottom: 30px;
+  }
 }
 
 /* NAV BAR PERSONALIZADA */
