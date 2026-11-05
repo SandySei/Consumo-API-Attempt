@@ -1,40 +1,129 @@
-## Consumo de API __Attempt__
+<h1 align="center">🌦️ atTEMPt — Tenha o Tempo em Suas Mãos</h1>
 
-SOMENTE WEB
+<p align="center">
+  Previsão do tempo para qualquer cidade do Brasil, feita com Vue.js e consumo de APIs públicas.
+</p>
 
-Desenvolvido em ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) que permite pesquisar cidades brasileiras e obter informações detalhadas sobre o clima e a temperatura. O site web utiliza quatro APIs para fornecer funcionalidades específicas:
+<p align="center">
+  <img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+</p>
 
-- __[API para Localização das Cidades do Brasil (IBGE):](https://servicodados.ibge.gov.br/api/docs/localidades)__ Esta API do IBGE é usada para obter informações detalhadas sobre as cidades brasileiras, como nomes, estados e regiões.
+<p align="center">
+  <a href="https://consumo-api-attempt.vercel.app/">
+    <img src="https://img.shields.io/badge/ver%20o%20site-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Ver o site no Vercel" />
+  </a>
+</p>
 
-- __[API para o Clima e Temperatura:](https://www.visualcrossing.com/weather-api)__ A API do Visual Crossing é utilizada para obter dados precisos sobre o clima e a temperatura da cidade pesquisada. Ela oferece informações em tempo real para que os usuários possam se manter informados sobre as condições climáticas.
+<p align="center">
+  <img src="./Previa.png" alt="Prévia do site atTEMPt" width="900" />
+</p>
 
-- __[API para Pesquisa de Imagens no Google:](https://developers.google.com/custom-search/v1/overview?hl=pt-br)__ A API de Pesquisa Personalizada do Google é usada para buscar imagens relacionadas à cidade pesquisada, tornando a experiência mais visual e atraente para o usuário.
+---
 
-- __[API "Calculadora" do Amor:](https://rapidapi.com/ajith/api/love-calculator)__ Esta API divertida e curiosa é usada para calcular uma porcentagem de compatibilidade de amor com base em dois nomes fornecidos pelo usuário. Está no projeto para parecer um anuncio fofinho.
+## 📋 Sobre o projeto
 
-### Estas foram as linguagens utilizadas neste repositório:
+O **atTEMPt** é um site em que você pesquisa uma cidade brasileira e vê a previsão do tempo para os próximos dias, com detalhes como nascer e pôr do sol, umidade e precipitação. Também dá para ver fotos da cidade pesquisada.
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+O projeto foi criado para praticar **consumo de APIs** em uma aplicação Vue 3, juntando várias fontes de dados em uma interface simples e responsiva.
 
-### Prévia do site foi publicado no Vercel: 
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) 
+## ✨ Funcionalidades
 
-[&nbsp;🔹:large_blue_diamond:🔹 Click Aqui! 🔹:large_blue_diamond:🔹&nbsp;](https://consumo-api-attempt.vercel.app/)
+- **🔎 Busca de cidades:** digite pelo menos 3 letras para ver as cidades do Brasil que combinam com a busca, com o estado e a UF de cada uma.
+- **🌡️ Previsão do tempo:** temperatura atual e cards com a previsão de 10 dias, navegáveis pelas setas. Cada card mostra o dia da semana, a temperatura média, a condição do tempo e a mínima e a máxima.
+- **🔄 Cards que giram:** ao clicar num card, ele vira e mostra a descrição do dia, o horário do nascer e do pôr do sol, a umidade e a precipitação.
+- **🖼️ Galeria de fotos:** fotos da cidade em mosaico. Clique numa foto para ampliar e navegue pelas setas (ou pelas setas do teclado).
+- **💘 Calculadora do Amor:** um "anúncio" divertido no canto da tela que calcula a compatibilidade entre dois nomes.
+- **📱 Responsivo:** funciona no celular, no tablet e no computador, com o conteúdo limitado a 1200px de largura.
 
-![Prévia](/Previa.png)
+## 🔌 APIs utilizadas
 
-Neste repositório, você encontrará os arquivos necessários para executar o site localmente ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white), bem como o código-fonte completo do projeto.
+| API | Para que serve |
+| --- | --- |
+| [IBGE — Localidades](https://servicodados.ibge.gov.br/api/docs/localidades) | Lista de municípios brasileiros, com estado e UF |
+| [Visual Crossing Weather](https://www.visualcrossing.com/weather-api) | Clima atual e previsão dos próximos dias, em português |
+| [Google Custom Search](https://developers.google.com/custom-search/v1/overview?hl=pt-br) | Busca de imagens da cidade pesquisada |
+| [Love Calculator (RapidAPI)](https://rapidapi.com/ajith/api/love-calculator) | Porcentagem da Calculadora do Amor |
 
-### Funcionalidades
+> **Observação:** a API da Calculadora do Amor saiu do ar. O site ainda tenta usá-la e, quando ela não responde, calcula o resultado localmente. O mesmo par de nomes sempre dá o mesmo resultado.
 
-- __Pesquisa de Cidades:__ O usuário pode inserir o nome de uma cidade brasileira na barra de pesquisa e obter informações sobre ela, incluindo o clima atual e previsão de tempo.
+## 🚀 Como rodar localmente
 
-- __Exibição do Clima e Temperatura:__ O aplicativo exibirá dados detalhados sobre o clima atual da cidade pesquisada, como temperatura, descrição do tempo, umidade, velocidade do vento e muito mais.
+Você precisa do [Node.js](https://nodejs.org/) instalado.
 
-- __Imagens da Cidade:__ Ao pesquisar uma cidade, o aplicativo também exibirá imagens relacionadas à cidade para tornar a experiência mais visual e agradável.
+```bash
+# 1. Clone o repositório
+git clone https://github.com/SandySei/Consumo-API-Attempt.git
 
-- __Calculadora do Amor:__ Além das informações climáticas, o aplicativo também oferece um toque de diversão com a calculadora do amor. Basta inserir o nome de duas pessoas e descobrir a porcentagem de compatibilidade amorosa!
-  
-Feito em conjunto com [Eduardo Scarante](https://github.com/EduardoScarante)
+# 2. Entre na pasta
+cd Consumo-API-Attempt
 
-Obrigado por visitar este repositório.
+# 3. Instale as dependências
+npm install
+
+# 4. Rode o servidor de desenvolvimento
+npm run dev
+```
+
+Depois abra o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
+
+Outros comandos:
+
+| Comando | O que faz |
+| --- | --- |
+| `npm run build` | Gera a versão de produção na pasta `dist/` |
+| `npm run preview` | Mostra localmente a versão gerada pelo build |
+
+## 🗂️ Estrutura do projeto
+
+```
+src/
+├── App.vue                 # Layout principal (navbar + páginas)
+├── main.js                 # Ponto de entrada da aplicação
+├── router/index.js         # Rotas
+├── views/
+│   ├── HomeView.vue        # Busca de cidades
+│   ├── Detail.vue          # Previsão do tempo da cidade
+│   ├── Info.vue            # Sobre o atTEMPt e a logo
+│   └── Creators.vue        # Desenvolvedores e APIs usadas
+├── components/
+│   ├── search.vue          # Item da lista de cidades
+│   ├── climaBox.vue        # Card de previsão (com flip)
+│   ├── galeriaFotos.vue    # Galeria de fotos da cidade
+│   ├── apiLove.vue         # Calculadora do Amor
+│   └── loadingModal.vue    # Tela de carregamento
+├── assets/                 # CSS global
+├── icons/                  # Imagens dos cards de clima
+├── imagens/ · logos/       # Imagens e logos do site
+└── lottie/                 # Animações da Calculadora do Amor
+```
+
+## 👩‍💻 Desenvolvedores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/SandySei">
+        <img src="./src/imagens/sandy.jpeg" width="100" alt="Sandy Seixas" /><br />
+        <b>Sandy Seixas</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/EduardoScarante">
+        <img src="./src/imagens/edu.jpeg" width="100" alt="Eduardo Scarante" /><br />
+        <b>Eduardo Scarante</b>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## 📄 Licença
+
+Este projeto está sob a licença descrita no arquivo [LICENSE](./LICENSE).
+
+---
+
+<p align="center">Obrigado por visitar este repositório! 💙</p>

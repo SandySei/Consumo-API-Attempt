@@ -80,9 +80,10 @@
 
 <style scoped>
 .container {
-  margin: auto;
-  height: 100%;
-  overflow: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .tradutor {
@@ -93,7 +94,8 @@
 }
 
 .content {
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
 
   display: flex;
@@ -103,7 +105,7 @@
 }
 
 .important {
-  font-size: xx-large;
+  font-size: clamp(1.4rem, 5vw, 2rem);
   text-align: center;
 }
 
@@ -123,12 +125,17 @@ p {
   margin-bottom: 20px;
   flex-direction: row;
   width: 25%;
+  min-width: 80px;
 }
 
+@media (max-width: 600px) {
+  p {
+    padding: 12px 0;
+  }
 
-
-/* .api {
-  display: flex;
-  flex-direction: column;
-} */
+  .text {
+    font-size: medium;
+    line-height: 1.7;
+  }
+}
 </style>

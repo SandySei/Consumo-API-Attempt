@@ -1,6 +1,4 @@
 <script>
-import { RouterLink, RouterView } from "vue-router";
-
 import icon from "./imagens/love-message.png";
 
 import loveApi from "./components/apiLove.vue";
@@ -18,7 +16,6 @@ export default {
   methods: {
     HandleModalLoveApi() {
       this.AnuncioApiLove = !this.AnuncioApiLove;
-      console.log(this.AnuncioApiLove);
     },
   },
 };
@@ -38,7 +35,9 @@ export default {
       </RouterLink>
     </nav>
 
-    <RouterView />
+    <div class="page">
+      <RouterView />
+    </div>
 
     <div class="anuncio" @click="HandleModalLoveApi">
       <img :src="icon" alt="" />
@@ -50,13 +49,25 @@ export default {
 
 <style scoped>
 .main {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 nav {
-  width: 100vw;
+  width: 100%;
   height: 50px;
+  flex-shrink: 0;
 
   padding: 0px;
   margin: 0px;
@@ -82,16 +93,6 @@ img {
   transform: rotateY(180deg);
 }
 
-/* nav > *.router-link-exact-active {
-  color: red;
-  font-weight: 700;
-}
-
-nav span a.router-link-exact-active:hover {
-  background-color: transparent;
-  color: red ;
-} */
-
 .anuncio {
   position: fixed;
   bottom: 0;
@@ -101,6 +102,16 @@ nav span a.router-link-exact-active:hover {
   cursor: pointer;
 
   animation: go-back 0.5s infinite alternate;
+}
+
+@media (max-width: 600px) {
+  img {
+    height: 45px;
+  }
+
+  .anuncio {
+    padding: 10px;
+  }
 }
 
 @keyframes go-back {
